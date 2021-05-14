@@ -1,3 +1,8 @@
+// Kelsey Werner
+// CS-350
+// Homework 5: Horspools Algorithm
+// 05/18/2021
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -58,9 +63,6 @@ int horspool_wrapper(char * pattern, int pattern_length, char * text, int text_l
   int pl = pattern_length - 1;
 
   for (int i = 0; i < TABLE_SIZE; ++i) { ASCII_TABLE[i] = pattern_length; }
-
-  ASCII_TABLE[pattern[pl]] = pattern_length;
-
   for (int i = 0; i < pattern_length - 1; ++i) { ASCII_TABLE[pattern[i]] = pl--; }
 
   return horspool(pattern, pattern_length, text, text_length, pattern_length - 1);
